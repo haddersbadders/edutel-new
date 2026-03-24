@@ -1,0 +1,15 @@
+---
+permalink: /assets/css/main.css
+---
+@use "bulma/bulma";
+
+// 1. Set your custom variables BEFORE importing Bulma
+$primary: #800080; // Example: Changing primary to Purple
+$family-sans-serif: "Inter", sans-serif;
+
+// 2. Import Bulma from node_modules
+
+// 3. Add any of your own custom CSS here
+.main-wrapper {
+    min-height: 100vh;
+}

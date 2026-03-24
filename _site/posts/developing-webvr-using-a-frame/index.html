@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developing WebVR using A-frame</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  </head>
+  <body>
+    <nav class="navbar is-primary">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="/">HOME</a></div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <aside class="column is-3">
+            <div class="menu">
+              <p class="menu-label">Blog</p>
+              <ul class="menu-list">
+                <li><a href="/posts">All Posts</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <main class="column is-9">
+            
+              <p><a href="https://aframe.io/">A-Frame</a> is a web framework for building 3D/AR/VR experiences. In this post, I'll explain how I use it and walk through the development environment that I use.</p>
+<p>There are a few tools that you'll need:</p>
+<ul>
+<li><strong>A code editor</strong>. I use <a href="https://atom.io">Atom</a>.</li>
+<li><strong>Access to Terminal</strong>. I use <a href="https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview">Ubuntu for Windows 10</a>, but you can use <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Windows Terminal</a> or on Mac, the built-in Terminal .</li>
+</ul>
+<p>And that's it, really! The rest is done in either the code you write or by installing packages with Terminal*.</p>
+<h2>*So what is Terminal?</h2>
+<p>It's a command-line interface that allows you to do stuff on your computer without using your graphical interface. I like to think of it as &quot;pure&quot; computing (or old-fashioned computing!).</p>
+<p>You can see Windows Terminal below. It looks a bit like MS DOS, but it isn't!</p>
+<p><img src="/images/terminal.png" alt="Screenshot of terminal in Windows"></p>
+<p>If you look at the commands I've written in Terminal above, I've <strong>changed directory</strong> (cd) to my Desktop, then I've <strong>made a new folder/directory</strong> (mkdir)  called <em>webvr_demo</em>. This saved me from having to use the mouse, right clicking etc. Just think of the effort saved there, my mouse is like soooo heavy 😆</p>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># To change directory</span>
+<span class="token builtin class-name">cd</span> .<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>  
+
+ <span class="token comment">#  To make directory</span>
+ <span class="token function">mkdir</span> webvr_demo</code></pre>
+<h2>Creating a project and setting up the files</h2>
+<p>As you can see above, I've just created a folder on my desktop called <strong>webvr_demo</strong>. You can do this either in Terminal or the regular way you create folders.</p>
+<p>Next, you need to create a HTML file inside of your project folder. There are many ways to do this, but here's how to do it with the Atom code editor:</p>
+<ol>
+<li>Open up Atom, then go File &gt; Add Project Folder. Choose your <strong>webvr_demo</strong> folder.</li>
+<li>In Atom, right click your root folder and choose <strong>new file</strong></li>
+<li>Name your new file <strong>index.html</strong></li>
+<li>In your index.html file, add some standard html - type html, then hit TAB to autofill</li>
+</ol>
+<p><img src="/images/newfile.png" alt="create a new file in Atom"></p>
+<p><img src="/images/newindex.png" alt="name the file index.html"></p>
+<p><img src="/images/addhtml.png" alt="add some html"></p>
+<p>You'll see a blue dot in the html file's tab in Atom - this means it has not been saved. Save it.</p>
+<p>To make sure everything is working so far, just add some content into the html file, between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> so your html looks like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ltr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    Hello world!
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>Open up the HTML file in Google Chrome and you'll have a very dull looking web page!</p>
+<p><img src="/images/boring-site.png" alt="your output web page"></p>
+<p>Now, let's get rid of that, it's rubbish! Delete the HTML and paste in the following code:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://aframe.io/releases/1.2.0/aframe.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-scene</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-box</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1 0.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 45 0<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#4CC3D9<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-box</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-sphere</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 1.25 -5<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.25<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#EF2D5E<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-sphere</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-cylinder</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1 0.75 -3<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.5<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#FFC65D<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-cylinder</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-plane</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 0 -4<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-90 0 0<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#7BC8A4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-plane</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-sky</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#ECECEC<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-sky</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-scene</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>That code is from <a href="https://aframe.io/docs/1.2.0/introduction/">https://aframe.io/docs/1.2.0/introduction/</a>, where you'll find all the info about a-frame btw.</p>
+<p>This adds in the a-frame Javascript:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://aframe.io/releases/1.2.0/aframe.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>and sets up a basic scene with various objects in it:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-scene</span><span class="token punctuation">></span></span></code></pre>
+<p>Now if you open your html file in your browser, it might work, or it might not! Opening local files in your browser isn't the right way to look at web pages under development as it isn't serving the page up properly and is likely to not work.</p>
+<p>The next section goes through setting up a local server.</p>
+<h2>Setting up a local web server</h2>
+<p>This is where things get interesting/technical/ugly/scary.</p>
+<p>I'm on Windows 10, so I'm going to switch to Ubuntu Terminal as this is what I'm used to. If you're on Mac, then regular terminal is fine.</p>
+<h4>Install node.js</h4>
+<p><a href="https://nodejs.org/en/">Node JS</a> is a Javascript runtime designed to create applications (whatever that means!). We need nodejs and npm (node package manager) so we can get ourselves a local web server up-and-running and install an a-frame addon called <em>a-frame watcher</em> (more later).</p>
+<p>Installing nodejs on Ubuntu is very straightforward:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># update installation repositories</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> update
+
+<span class="token comment"># install Node JS</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs</code></pre>
+<p>Then once that's installed, to add npm:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">npm</span></code></pre>
+<p>If using Windows without Ubuntu, you can <a href="https://nodejs.org/en/">download and install nodejs from the website</a> which should install npm too.</p>
+<p>On Mac, you can install from the nodejs website, by installing <a href="https://brew.sh/">Homebrew</a> and <a href="https://nodejs.org/tr/download/package-manager/#macos">running the commands to install nodejs</a>.</p>
+<h4>Install npm http-server</h4>
+<p>On Ubuntu 20.04 for Windows 10, the default node version seemed to be 10.19, while http-server required verion 12 or above. I managed to install node version 12 by referring to <a href="desource/distributions/blob/master/README.md">this page</a>.</p>
+<p>To install the web server, refer to this page <a href="https://www.npmjs.com/package/http-server">https://www.npmjs.com/package/http-server</a>.</p>
+<p>Starting the webserver and going to http://localhost:8080 will serve up your basic VR app:</p>
+<p><img src="/images/basic-vr-app.png" alt="your basic VR app"></p>
+<p>http-server will also give you an IP address that you ca use if you want to view your masterpiece on a VR headset or mobile phone!</p>
+<h2>Editing your VR app</h2>
+<p>Now you're up and running, you can go back to your index.html file in Atom and start making some changes.</p>
+<p>Let's change some of the shapes and colours, starting with the box:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-box</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1 0.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 45 0<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#4CC3D9<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-box</span><span class="token punctuation">></span></span></code></pre>
+<p>You can see the box's colour is clearly defined as <strong>#4CC3D9</strong>. This is a <em>Hex code</em> and it's one of the ways we can define colours in HTML. There are endless resources for finding these colours, <a href="https://color.adobe.com/create/color-wheel">here's a good one from Adobe</a>.</p>
+<p>Find a new colour and replace the box's colour. Something like:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-box</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1 0.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 45 0<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#BF6D4E<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>Then do the same for the other objects...</p>
+<p><img src="/images/new-shape-colours.png" alt="changed the colours of the shapes"></p>
+<p>Now let's look at positions of the objects. The position values contain three numbers for positioning along the x, y and z axis. These values are in metres and with respect to the centre of the object:</p>
+<ul>
+<li>x extends <em>right</em></li>
+<li>y extends <em>up</em> and</li>
+<li>z extends out of the screen towards you</li>
+</ul>
+<p><img src="https://cloud.githubusercontent.com/assets/674727/20328731/326137a8-ab49-11e6-9b76-4e3a65f333d9.jpg" alt="right-handed co-ordinate system"></p>
+<figcaption> Image from what-when-how.com</figcaption>
+<p>For the box, we have</p>
+<pre><code>position=&quot;-1 0.5 -3&quot;
+</code></pre>
+<p>which means the box's centre (with respect to the centre of the scene) is positioned:</p>
+<ul>
+<li>1 metre left i.e. -1 metre right</li>
+<li>1/2 a metre vertical (at y=0 it's centre point rests on the floor, so needs raising up by height/2 = 0.5, as it is 1m high)</li>
+<li>-3 metres away from us</li>
+</ul>
+<p>Have a go at moving the objects around using their positional values. See if you can stack them on top of one another!</p>
+<p><img src="/images/shapes-stacked.png" alt="shapes stacked"></p>
+<p>That's quite difficult isn't it!</p>
+<h2>Go go gadget arms!</h2>
+<p>In your browser press <strong>ctrl + alt + i</strong>. This brings up the <strong>scene inspector</strong>!</p>
+<p><img src="/images/scene-inspector.png" alt="scene inspector"></p>
+<p>Woah! 💥</p>
+<p>Down the left-hand side, you can select objects in your scene (use this rather than clicking the objects to select as you can often select the wrong thing!). With an object selected, you can use the red, green and blue handles to move it in 3D space.</p>
+<p><img src="/images/handles.png" alt="move handles"></p>
+<p>You'll also see on the right-hand panel, all the properties of the selected object.</p>
+<p>Try moving an object and use the <strong>save</strong> icon at the top of the left-hand panel:</p>
+<p><img src="/images/no-watcher.png" alt="watcher is not running!"></p>
+<p>Oh no! 😧 Don't worry, we just need to install a-frame watcher to allow the browser to edit HTML files!</p>
+<h2>Installing a-frame watcher</h2>
+<p><a href="https://github.com/supermedium/aframe-watcher">A-frame watcher</a> is installed via npm (you have that installed) and will enable changes made in the inspector to be written to your HTML files. That gives us a pretty good visual editor!</p>
+<p>Instructions are in the link above, but here too:</p>
+<p>In terminal, do</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> aframe-watcher</code></pre>
+<p>Then launch aframe-watcher:</p>
+<pre class="language-shell"><code class="language-shell">aframe-watcher</code></pre>
+<p><strong>Note</strong> you'll need to run two instances of Terminal to run http-server and aframe-watcher concurrently.</p>
+<h2>Using A-frame watcher</h2>
+<p>A-frame watcher only works if your objects have IDs. In your HTML, you need to give each object you wish to edit and ID, so it looks like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-box</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cube<span class="token punctuation">"</span></span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1.73722 0.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 45 0<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#BF6D4E<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-box</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-sphere</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ball<span class="token punctuation">"</span></span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 1.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#4B5CBF<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-sphere</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-cylinder</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tube<span class="token punctuation">"</span></span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 2.75 -3<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.5<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#8677A6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-cylinder</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-plane</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>floor<span class="token punctuation">"</span></span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 0 -4<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-90 0 0<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#F2F2F2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-plane</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-sky</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sky<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#ECECEC<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-sky</span><span class="token punctuation">></span></span></code></pre>
+<p>You can see that each object has an ID for watcher to latch onto. The ID name is fairly arbitrary, you can name them as you see fit.</p>
+<p>When saving in a-frame's inspector, keep an eye on the watcher terminal as it will ask you to allow the edits - just choose yes!</p>
+<p>That's it! 🎉</p>
+
+            
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Built with Eleventy 3.0 and Bulma</p>
+      </div>
+    </footer>
+  </body>
+</html>

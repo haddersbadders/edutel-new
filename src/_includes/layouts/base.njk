@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title or "My New Site" }}</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  </head>
+  <body>
+    <nav class="navbar is-primary">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="/">HOME</a></div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <aside class="column is-3">
+            <div class="menu">
+              <p class="menu-label">Blog</p>
+              <ul class="menu-list">
+                <li><a href="/posts">All Posts</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <main class="column is-9">
+            {% block content %}
+              {{ content | safe }}
+            {% endblock %}
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Built with Eleventy 3.0 and Bulma</p>
+      </div>
+    </footer>
+  </body>
+</html>

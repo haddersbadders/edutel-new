@@ -1,0 +1,8 @@
+{
+  "layout": "layouts/base.njk",
+  "permalink": "posts/{{ title | slug }}/index.html",
+  "author": "Hadrian Cawthorne",
+  "tags": [
+    "post"
+  ]
+}

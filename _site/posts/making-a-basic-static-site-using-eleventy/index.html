@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Making a basic static site using Eleventy</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  </head>
+  <body>
+    <nav class="navbar is-primary">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="/">HOME</a></div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <aside class="column is-3">
+            <div class="menu">
+              <p class="menu-label">Blog</p>
+              <ul class="menu-list">
+                <li><a href="/posts">All Posts</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <main class="column is-9">
+            
+              <p>This site was originally a WordPress site, but I had a few issues with WordPress:</p>
+<ul>
+<li>faffy</li>
+<li>security issues</li>
+<li>need to login/remember login details</li>
+<li>spam</li>
+<li>plugins that don't deliver</li>
+<li>bloated backend, endless settings pages etc</li>
+<li>Gutenberg editor is not nice</li>
+<li>can be slow</li>
+</ul>
+<h2>Static website builders</h2>
+<p>I enjoy coding with HTML and CSS and prefer simple ways of managing content.</p>
+<p><strong>Static website generators</strong> are good for this!</p>
+<p>I had played with <a href="https://jekyllrb.com/">Ruby-based Jekyll</a> and then got interested in <a href="https://www.11ty.dev/">Eleventy</a>.</p>
+<p>With a static website generator, you are able to turn even the most basic HTML into a template and manage content with <a href="https://www.markdownguide.org/">simple markdown files</a> and simple <a href="https://www.w3schools.com/js/js_json_intro.asp">json data</a>.</p>
+<h2>Eleventy: A vague tutorial for a super simple site</h2>
+<p>Let's have a go at Eleventy with this tutorial.</p>
+<p>There is also <a href="/posts/building-a-website-using-eleventy/">an advanced Eleventy tutorial here</a>.</p>
+<h3>Tools you will need</h3>
+<ul>
+<li>Make sure node is installed. You can <a href="https://nodejs.org/en/download/">find installers on the node.js website</a>.</li>
+<li>a general code editor</li>
+<li>a Terminal app</li>
+</ul>
+<p>I'm using Windows 10, and I am using <a href="https://code.visualstudio.com/">Visual Studio Code</a> which has a built-in Terminal.</p>
+<h3>Make a project folder</h3>
+<p>Create a folder somehwere and use this to work in. Then in Terminal, go to that folder e.g.</p>
+<pre class="language-shell"><code class="language-shell"> C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>edutel<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>static-site </code></pre>
+<h3>Make some starter folders and files</h3>
+<p>Inside your directory, create a folder called <strong>_src</strong>. This will be where the websites building blocks are kept.</p>
+<p>In your main folder, make a file called <strong>eleventy.config.js</strong> then open in the editor and add the following to it:</p>
+<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token string">"_src"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token string">"_dist"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This is your configuration file.</p>
+<h3>Create a package.json file</h3>
+<p>Every Eleventy project needs a package.json, which provides an easy way to manage the project's metadata and dependencies.</p>
+<p>I don't really know that much about Node.js, other that we need to <strong>initialise</strong> a project and the package.json handles/lists all the packages etc.</p>
+<p>In your project folder, in Terminal:</p>
+<pre class="language-shell"><code class="language-shell">  <span class="token function">npm</span> init <span class="token parameter variable">-y</span> </code></pre>
+<p>This creates the package.json file that should have the following in it:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"static-site"</span><span class="token punctuation">,</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"eleventy.config.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3>Install Eleventy</h3>
+<p>We now need to install Eleventy using <strong>npm</strong> (Node Package Manager).</p>
+<pre class="language-shell"><code class="language-shell"> <span class="token function">npm</span> <span class="token function">install</span> @11ty/eleventy --save-dev </code></pre>
+<p>Now in the package.json file you will also see:</p>
+<pre class="language-json"><code class="language-json"><span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+   <span class="token property">"@11ty/eleventy"</span><span class="token operator">:</span> <span class="token string">"^2.0.1"</span>
+ <span class="token punctuation">}</span></code></pre>
+<p>Telling you that Eleventy is needed for this project.</p>
+<h3>Run Eleventy</h3>
+<p>Node.js is a <strong>runtime environment</strong> which means you can run and execute code with it. To run Eleventy, use <strong>npx</strong> (node package execute):</p>
+<pre class="language-shell"><code class="language-shell">npx @11ty/eleventy </code></pre>
+<p>This should give you something like this:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token punctuation">[</span>11ty<span class="token punctuation">]</span> Wrote <span class="token number">0</span> files <span class="token keyword">in</span> <span class="token number">0.02</span> seconds <span class="token punctuation">(</span>v2.0.1<span class="token punctuation">)</span> </code></pre>
+<p>Eleventy has been executed and tried to build the site based on the code that I have written, but hasn't actually done anything as the site is currently empty!</p>
+<h3>Create a page</h3>
+<p>Create a file called <code>index.md</code> in your <strong>_src</strong> directory and put something in it, like:</p>
+<pre class="language-md"><code class="language-md"> <span class="token title important"><span class="token punctuation">#</span> hello </span></code></pre>
+<p>Then run Eleventy like this to build and serve up your website:</p>
+<pre class="language-shell"><code class="language-shell">npx eleventy <span class="token parameter variable">--serve</span> </code></pre>
+<p>Terminal should return something like this to you...</p>
+<pre class="language-shell"><code class="language-shell"><span class="token punctuation">[</span>11ty<span class="token punctuation">]</span> Wrote <span class="token number">1</span> <span class="token function">file</span> <span class="token keyword">in</span> <span class="token number">0.08</span> seconds <span class="token punctuation">(</span>v2.0.1<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>11ty<span class="token punctuation">]</span> Watching…
+<span class="token punctuation">[</span>11ty<span class="token punctuation">]</span> Server at http://localhost:8080/</code></pre>
+<p>... telling you that it has written a file, that it's watching for any changes to files or new pages and you can view your site at <code>http://localhost:8080/</code></p>
+<p>Now go to <code>http://localhost:8080/</code> in your browser and:</p>
+<p>Wohoo!</p>
+<p><img src="/images/hello-site.png" alt="a very basic site"></p>
+<h3>The output site</h3>
+<p>If you look inside yoru main project folder you will now see a folder called <strong>_dist</strong>, with an <code>index.html</code> file inside. This has been created by Eleventy and this is the output directory, or your <strong>static site</strong>!</p>
+
+            
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Built with Eleventy 3.0 and Bulma</p>
+      </div>
+    </footer>
+  </body>
+</html>
