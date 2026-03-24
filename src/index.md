@@ -15,6 +15,8 @@ Below are the posts I've migrated so far:
 ### [{{ post.data.title }}]({{ post.url }})
 *Published on {{ post.date | postDate }}*
 
+![{{ post.data.title }}]({{ post.data.coverImage }})
+
 {{ post.data.description or "Read more..." }}
 
 ---
