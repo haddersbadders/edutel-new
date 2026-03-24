@@ -5,7 +5,7 @@ author: Becky Parry
 tags:
   - 360°
   - VR
-coverImage: /images/Broomhall_tinyplanet.jpg
+coverImage: /assets/images/Broomhall_tinyplanet.jpg
 slug: When we first proposed to colleagues that we could use virtual reality in our higher education teaching, it is fair to say there was some healthy scepticism. Some colleagues had early experiences of VR headsets and worried about feeling sick. Others couldn’t see how it might relate to their work.
 ---
 
@@ -62,7 +62,7 @@ We used this content with students to give them an experience of data analysis o
 <cite>Kat Vallely, EdD Student</cite>
 
 <figure>
-<img alt="Image of children in the reading corner, captured by the 360 camera" src="/images/Screenshot-2021-09-03-135633-1024x490.png" />
+<img alt="Image of children in the reading corner, captured by the 360 camera" src="/assets/images/Screenshot-2021-09-03-135633-1024x490.png" />
 <figcaption>Image of children in the reading corner, captured by the 360 camera.</figcaption>
 </figure>
 

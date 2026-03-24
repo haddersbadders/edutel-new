@@ -4,9 +4,9 @@ date: 2021-12-21
 slug: A-frame is a Javascript WebVR framework. Read how I've set up a development environment to create VR experiences
 tags:
   - VR
-coverImage: /images/vr1280.jpg
+coverImage: /assets/images/vr1280.jpg
 author: Hadrian Cawthorne
-authorImage: /images/hadrian.jpg
+authorImage: /assets/images/hadrian.jpg
 ---
 
 [A-Frame](https://aframe.io/) is a web framework for building 3D/AR/VR experiences. In this post, I'll explain how I use it and walk through the development environment that I use.
@@ -24,7 +24,7 @@ It's a command-line interface that allows you to do stuff on your computer witho
 
 You can see Windows Terminal below. It looks a bit like MS DOS, but it isn't!
 
-![Screenshot of terminal in Windows](/images/terminal.png)
+![Screenshot of terminal in Windows](/assets/images/terminal.png)
 
 If you look at the commands I've written in Terminal above, I've **changed directory** (cd) to my Desktop, then I've **made a new folder/directory** (mkdir)  called *webvr_demo*. This saved me from having to use the mouse, right clicking etc. Just think of the effort saved there, my mouse is like soooo heavy 😆
 
@@ -47,11 +47,11 @@ Next, you need to create a HTML file inside of your project folder. There are ma
 3. Name your new file **index.html**
 4. In your index.html file, add some standard html - type html, then hit TAB to autofill
 
-![create a new file in Atom](/images/newfile.png)
+![create a new file in Atom](/assets/images/newfile.png)
 
-![name the file index.html](/images/newindex.png)
+![name the file index.html](/assets/images/newindex.png)
 
-![add some html](/images/addhtml.png)
+![add some html](/assets/images/addhtml.png)
 
 You'll see a blue dot in the html file's tab in Atom - this means it has not been saved. Save it.
 
@@ -72,7 +72,7 @@ To make sure everything is working so far, just add some content into the html f
 
 Open up the HTML file in Google Chrome and you'll have a very dull looking web page!
 
-![your output web page](/images/boring-site.png)
+![your output web page](/assets/images/boring-site.png)
 
 Now, let's get rid of that, it's rubbish! Delete the HTML and paste in the following code:
 
@@ -148,7 +148,7 @@ To install the web server, refer to this page [https://www.npmjs.com/package/htt
 
 Starting the webserver and going to http://localhost:8080 will serve up your basic VR app:
 
-![your basic VR app](/images/basic-vr-app.png)
+![your basic VR app](/assets/images/basic-vr-app.png)
 
 http-server will also give you an IP address that you ca use if you want to view your masterpiece on a VR headset or mobile phone!
 
@@ -172,7 +172,7 @@ Find a new colour and replace the box's colour. Something like:
 
 Then do the same for the other objects...
 
-![changed the colours of the shapes](/images/new-shape-colours.png)
+![changed the colours of the shapes](/assets/images/new-shape-colours.png)
 
 Now let's look at positions of the objects. The position values contain three numbers for positioning along the x, y and z axis. These values are in metres and with respect to the centre of the object:
 
@@ -195,7 +195,7 @@ position="-1 0.5 -3"
 
 Have a go at moving the objects around using their positional values. See if you can stack them on top of one another!
 
-![shapes stacked](/images/shapes-stacked.png)
+![shapes stacked](/assets/images/shapes-stacked.png)
 
 That's quite difficult isn't it!
 
@@ -203,19 +203,19 @@ That's quite difficult isn't it!
 
 In your browser press **ctrl + alt + i**. This brings up the **scene inspector**!
 
-![scene inspector](/images/scene-inspector.png)
+![scene inspector](/assets/images/scene-inspector.png)
 
 Woah! 💥
 
 Down the left-hand side, you can select objects in your scene (use this rather than clicking the objects to select as you can often select the wrong thing!). With an object selected, you can use the red, green and blue handles to move it in 3D space.
 
-![move handles](/images/handles.png)
+![move handles](/assets/images/handles.png)
 
 You'll also see on the right-hand panel, all the properties of the selected object.
 
 Try moving an object and use the **save** icon at the top of the left-hand panel:
 
-![watcher is not running!](/images/no-watcher.png)
+![watcher is not running!](/assets/images/no-watcher.png)
 
 Oh no! 😧 Don't worry, we just need to install a-frame watcher to allow the browser to edit HTML files!
 

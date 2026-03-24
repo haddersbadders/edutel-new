@@ -4,7 +4,7 @@ date: 2024-05-16
 tags:
   - Video
   - Screencasting
-coverImage: /images/home-office-5190504_1280.jpg
+coverImage: /assets/images/home-office-5190504_1280.jpg
 slug: There are lots of ways you can use and make video to present your ideas. Here are some of those that are widely available to you at Sheffield.
 draft: true
 ---
@@ -25,7 +25,7 @@ Everyone at the University can access Kaltura Capture to make screencasts. It is
 
 Kaltura capture also lets you record your webcam simultaneously. This is good if you want to show your viewers who you are. But ultimately, this is optional, and you can turn your webcam off when recording your screencast.
 
-![Kaltura Capture tool](/images/2021-07-05-15_12_03-Window.png)
+![Kaltura Capture tool](/assets/images/2021-07-05-15_12_03-Window.png)
 
 **Tips and tricks** - You don’t have to record your screencast in one go. Learn the keyboard shortcuts to pause and resume recording and you can strategically pause recording while you pause to gather your thoughts or just get ready for the next section. 
 
@@ -56,11 +56,11 @@ PowerPoint allows you to narrate each slide of your presentation then export you
 
 As with Kaltura Capture, you also have the option of recording your webcam along with your narration, or you can turn this off.
 
-![The option to turn off the camera ](/images/2021-07-05-15_00_41-Presentation3-PowerPoint-Presenter-View.png)
+![The option to turn off the camera ](/assets/images/2021-07-05-15_00_41-Presentation3-PowerPoint-Presenter-View.png)
 
 Once you have narrated all your slides, you can export this as a video file via the **File > Export > Create a Video** menu:
 
-![PowerPoints' export as video menu](/images/2021-07-05-14_50_59-Window.png)
+![PowerPoints' export as video menu](/assets/images/2021-07-05-14_50_59-Window.png)
 
 Now that you have a video version of your presentation, you can upload this to Kaltura's _My Media_ where you can also submit it for assessment. See:
 

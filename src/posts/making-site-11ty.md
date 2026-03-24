@@ -4,9 +4,9 @@ date: 2021-12-17
 slug: This is how I made a site using the static website framework, Eleventy.
 tags:
   - Web Development
-coverImage: /images/pixels.jpg
+coverImage: /assets/images/pixels.jpg
 author: Hadrian Cawthorne
-authorImage: /images/hadrian.jpg
+authorImage: /assets/images/hadrian.jpg
 ---
 This site was originally a WordPress site, but I had a few issues with WordPress:
 
@@ -162,7 +162,7 @@ Now go to `http://localhost:8080/` in your browser and:
 
 Wohoo! 
 
-![a very basic site](/images/hello-site.png)
+![a very basic site](/assets/images/hello-site.png)
 
 ### The output site
 

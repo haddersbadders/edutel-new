@@ -4,7 +4,7 @@ date: 2020-08-20T00:00:00.000Z
 author: Hadrian Cawthorne
 tags:
   - Blackboard
-coverImage: /images/padlock-428549_1280.jpg
+coverImage: /assets/images/padlock-428549_1280.jpg
 alt: an old rusty padlock
 slug: You can use the Course Room in Blackboard Collaborate to provide a private space for your student meetings or tutorials. Each Blackboard site has a Collaborate Course Room. The Course Room is permanently open and can be accessed by you and your students at any time.
 draft: true
@@ -14,7 +14,7 @@ You can use the Course Room in Blackboard Collaborate to provide a private space
 
 Each Blackboard site has a Collaborate Course Room. The Course Room is permanently open and can be accessed by you and your students at any time.
 
-![Screenshot of the Collaborate course room](/images/2020-08-20-13_59_27-Window.png)
+![Screenshot of the Collaborate course room](/assets/images/2020-08-20-13_59_27-Window.png)
 
 ## An Open Room
 
@@ -34,8 +34,8 @@ If you want to have a fully private online meeting with a student, you simply ne
 
 The option to lock/unlock the room is located in the Course Room's options menu:
 
-![Screenshot of the course room's lock option](/images/lock-course-room.png)
+![Screenshot of the course room's lock option](/assets/images/lock-course-room.png)
 
 Because the Course Room is running in a separate tab to Blackboard, you can lock/unlock the course room while inside the room by just switching to the Blackboard tab and then back again.
 
-![screenshot of two browser tabs](/images/switch-tabs.png)
+![screenshot of two browser tabs](/assets/images/switch-tabs.png)

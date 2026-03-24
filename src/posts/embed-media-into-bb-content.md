@@ -5,7 +5,7 @@ author: Hadrian Cawthorne
 tags:
   - Blackboard
   - Video
-coverImage: /images/embed-BB.jpg
+coverImage: /assets/images/embed-BB.jpg
 alt: laptop showing Blackboard editing
 slug: You can embed media from lots of places like Kaltura, YouTube, Twitter, and more into your Blackboard content.
 draft: true
@@ -33,29 +33,29 @@ If you want to embed someone else's Kaltura video into Blackboard:
 
 Open the video page and find the **share tab**:
 
-![Screenshot of Kaltura's share tab](/images/kt-share.png)
+![Screenshot of Kaltura's share tab](/assets/images/kt-share.png)
 
 Then from the share tab, find the **embed tab**:
 
-![Screenshot of Kaltura's embed tab](/images/kt-embed-tab.png)
+![Screenshot of Kaltura's embed tab](/assets/images/kt-embed-tab.png)
 
 Then on the embed tab, **check the size** of the video you want to embed (large is recommended) and **copy the embed code**:
 
-![Screenshot of the embed code in Kaltura.](/images/kt-embed.png)
+![Screenshot of the embed code in Kaltura.](/assets/images/kt-embed.png)
 
 #### In **YouTube**
 
 You can find the embed code under **share** below the video's low-bar:
 
-![Screenshot of the share button on Youtube](/images/share-button-YT.png)
+![Screenshot of the share button on Youtube](/assets/images/share-button-YT.png)
 
 This brings up various options. Choose **Embed**:
 
-![Screenshot of the Youtube embed option](/images/embed-option-YT.png)
+![Screenshot of the Youtube embed option](/assets/images/embed-option-YT.png)
 
 This then gives you to the embed code. Just copy this:
 
-![Screenshot of the Youtube Embed](/images/copy-embed-YT-1024x358.png)
+![Screenshot of the Youtube Embed](/assets/images/copy-embed-YT-1024x358.png)
 
 ## Paste the embed code
 
@@ -63,23 +63,23 @@ Once you've copied an embed code, you just need to paste it. But in a specific 
 
 Create a new item in Blackboard by hovering over the **Build Content** menu and choosing **Item**:
 
-![Screenshot of adding a Blackboard item](/images/add-item.png)
+![Screenshot of adding a Blackboard item](/assets/images/add-item.png)
 
 Next, find the **Source Code** button **< >** in the text editor, you may need to toggle the show more button if you can't see it:
 
-![Show more toggle](/images/2020-11-11-14_37_30-Content.png)
+![Show more toggle](/assets/images/2020-11-11-14_37_30-Content.png)
 
 
-![the source code button](/images/2020-11-11-14_39_35-Content.png)
+![the source code button](/assets/images/2020-11-11-14_39_35-Content.png)
 
 Paste in your embed code and press update:
 
-![pasting the embed code](/images/2020-11-11-14_41_46-Content-1024x563.png)
+![pasting the embed code](/assets/images/2020-11-11-14_41_46-Content-1024x563.png)
 
 This will give you a preview of your media in the editor:
 
-![preview of your media in the editor](/images/2020-11-11-14_50_37-Content-1024x801.png)
+![preview of your media in the editor](/assets/images/2020-11-11-14_50_37-Content-1024x801.png)
 
 Save this and you'll see the video is now embedded!
 
-![Screenshot of embedded video in Blackboard.](/images/2020-08-13-16_17_27-Content.png)
+![Screenshot of embedded video in Blackboard.](/assets/images/2020-08-13-16_17_27-Content.png)

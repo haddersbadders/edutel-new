@@ -5,7 +5,7 @@ author: Hadrian Cawthorne
 tags:
   - Sound
   - Video
-coverImage: /images/speak-238488_1920.jpg
+coverImage: /assets/images/speak-238488_1920.jpg
 slug: Voice is a vitally important part of any video. If the sound quality is poor, it can be a distraction for the viewer and make it difficult to generate captions for your video (a crucial part of ensuring your video meets accessibility requirements). This post will give some advice to help you get the best quality sound for your video.
 draft: true
 ---
@@ -20,7 +20,7 @@ It's really tricky to give advice to you all when you're recording in your homes
 
 There are a few easy-to-spot signs of low-quality sound:
 
-<audio controls src="/images/sounds-bad-and-good_01.mp3"></audio>
+<audio controls src="/assets/images/sounds-bad-and-good_01.mp3"></audio>
 
 
 **Crunchy** \- your computer needs to turn sound from your voice into digital data. If the computer is old or the audio converters are poor quality, your recorded sound can suffer from crunchiness. In technical terms this is low bit-rate. The remedy would be to use an additional audio converter or mic like a USB microphone, headset or sound card.

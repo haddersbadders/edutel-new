@@ -4,7 +4,7 @@ date: 2021-02-16T00:00:00.000Z
 author: Hadrian Cawthorne
 tags:
   - Google Apps
-coverImage: /images/despaired-2261021_1920.jpg
+coverImage: /assets/images/despaired-2261021_1920.jpg
 slug: We use a lot of technology at work so I've put together some tips, tricks and hacks that might save you some time or just make work a bit simpler. This post is all about Google Calendar.
 draft: true
 ---
@@ -29,11 +29,11 @@ When you add a meeting in your calendar, it defaults to an hour long. Did you kn
 
 Go into your settings and find the **Event Settings**:
 
-- ![Event Settings](/images/2021-02-11-10_24_48-University-of-Sheffield-–-Calendar-7-days-starting-Monday-8-February-2021.png)
+- ![Event Settings](/assets/images/2021-02-11-10_24_48-University-of-Sheffield-–-Calendar-7-days-starting-Monday-8-February-2021.png)
 
     Settings
 
-- ![Event Settings](/images/2021-02-11-10_26_05-University-of-Sheffield-–-Calendar-General-settings.png)
+- ![Event Settings](/assets/images/2021-02-11-10_26_05-University-of-Sheffield-–-Calendar-General-settings.png)
 
     Event Settings
 
@@ -49,7 +49,7 @@ Activating **Speedy meetings** is an interesting option. This just cuts short an
 
 So for example, if your default duration is 60 minutes, a new calendar entry will get shortened by 50 minutes. If you try to shorten this entry to 30 minutes, it will snap to 25 minutes.
 
-![Setting to Speedy meetings will shorten your meetings](/images/speedy.gif)
+![Setting to Speedy meetings will shorten your meetings](/assets/images/speedy.gif)
 
 #### Setting Annual Leave
 
@@ -57,13 +57,13 @@ If you tell Calendar when your annual leave is, it will automatically decline an
 
 This is really simple, just add calendar entries with the title **Leave**, **Annual Leave** or **Vacation**. These are the trigger words that Calendar recognises and automatically sets as **Out of office**.
 
-![Adding leave automatically ](/images/Leave.gif)
+![Adding leave automatically ](/assets/images/Leave.gif)
 
 #### Find a time when inviting others
 
 It can be difficult to organise meetings when you can't see when others are free. Using the **Find a Time** tool in Calendar can be really useful - you can see the calendars of all the invitees together (colour-coded) and choose a time that suits everyone (well, nearly everyone!)
 
-![Find a time in Calendar](/images/2021-02-11-14_13_51-University-of-Sheffield-–-Calendar-Event-details-1024x585.png)
+![Find a time in Calendar](/assets/images/2021-02-11-14_13_51-University-of-Sheffield-–-Calendar-Event-details-1024x585.png)
 
 #### Setting working hours
 
@@ -71,11 +71,11 @@ It's debatable whether this tip will save you any time, but it can be a signal t
 
 You can find this in Settings under **Working Hours**. You can set your normal working for the whole week, for each day.
 
-![Working Hours](/images/2021-02-11-14_38_36-University-of-Sheffield-–-Calendar-General-settings-1024x486.png)
+![Working Hours](/assets/images/2021-02-11-14_38_36-University-of-Sheffield-–-Calendar-General-settings-1024x486.png)
 
 Others are able to see when meetings fall outside of your working pattern. Non-working hours are greyed out and meetings set outside of working hours are denoted with the purple moon icon:
 
-![Seeing working hours in calendar](/images/2021-02-11-14_43_56-University-of-Sheffield-–-Calendar-7-days-starting-Thursday-11-February-2021.png)
+![Seeing working hours in calendar](/assets/images/2021-02-11-14_43_56-University-of-Sheffield-–-Calendar-7-days-starting-Thursday-11-February-2021.png)
 
 #### Using the Tasks app
 

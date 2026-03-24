@@ -7,7 +7,7 @@ tags:
   - Kaltura
   - Screencasting
   - Video
-coverImage: /images/filming-4371566_1920.jpg
+coverImage: /assets/images/filming-4371566_1920.jpg
 slug: Video is an incredibly effective format for delivering blended learning. There are lots of reasons for creating video and many different formats to choose from. This post will give you some ideas of easy-to-use tools you can use to make videos.
 draft: true
 ---
@@ -17,7 +17,7 @@ Video is an incredibly effective format for delivering blended learning. There a
 This post will give you some ideas of easy-to-use tools you can use to make videos.
 
 <figure>
-<img alt="Becky Parry being interviewed" src="/images/IMG_20191004_143405-1024x768.jpg"/>
+<img alt="Becky Parry being interviewed" src="/assets/images/IMG_20191004_143405-1024x768.jpg"/>
 <figcaption>Becky Parry being interviewed by Fiona Scott</figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Interviewing someone is a really good way to tap into their knowledge and expert
 
 While we're socially distancing, it's still easy to conduct an interview online. **Google Meet** is an excellent tool for conducting meetings online and recording them. You'll find the record button in the menu like this:
 
-![The record button in Meet.](/images/2020-09-09-16_35_19-Window.png)
+![The record button in Meet.](/assets/images/2020-09-09-16_35_19-Window.png)
 
 When you've finished recording, you'll get an email giving you the location for the video file in Google Drive. You can download this and re-upload to Kaltura.
 

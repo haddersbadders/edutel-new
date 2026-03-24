@@ -5,7 +5,7 @@ author: Hadrian Cawthorne
 tags:
   - VR
   - 360°
-coverImage: /images/VRexhibit.png
+coverImage: /assets/images/VRexhibit.png
 alt: VR Environment
 slug: Exploring using WondaVR to create a virtual exhibition space with students on the EDU61004 Media Making and Creativity module. 
 ---
@@ -25,7 +25,7 @@ In this module, students explore the different ways children can use technology 
 
 I wanted students to be able to showcase their work and at the same time learn about authoring VR experiences. 
 
-<figure><img src="/images/wvredit.png" at="The WondaVR editing interface" /><figcaption>the WondaVR editing interface</figcaption></figure>
+<figure><img src="/assets/images/wvredit.png" at="The WondaVR editing interface" /><figcaption>the WondaVR editing interface</figcaption></figure>
 
 I ran a collaborative session where students co-created their VR exhibition. In the session, students used Google Drive to collate all their media files and dicussed where things should go within the space. We were slightly restricted in that WondaVR only allows one person to edit a project at a time, so students took it in turn to have a go at editing and placing their assets within the 3D room. 
 

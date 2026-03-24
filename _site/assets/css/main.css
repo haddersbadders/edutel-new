@@ -3126,7 +3126,7 @@ table th {
 }
 
 .skeleton-block:not(:last-child), .media:not(:last-child), .level:not(:last-child), .fixed-grid:not(:last-child), .grid:not(:last-child), .tabs:not(:last-child), .pagination:not(:last-child), .message:not(:last-child), .card:not(:last-child), .breadcrumb:not(:last-child), .field:not(:last-child), .file:not(:last-child), .title:not(:last-child),
-.subtitle:not(:last-child), .tags:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .progress:not(:last-child), .notification:not(:last-child), .content:not(:last-child), .buttons:not(:last-child), .box:not(:last-child), .block:not(:last-child) {
+.subtitle:not(:last-child), main h3:not(:last-child), .tags:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .progress:not(:last-child), .notification:not(:last-child), .content:not(:last-child), .buttons:not(:last-child), .box:not(:last-child), .block:not(:last-child) {
   margin-bottom: var(--bulma-block-spacing);
 }
 
@@ -4548,7 +4548,7 @@ div.icon-text {
   inset-inline-end: 1rem;
   top: 1rem;
 }
-.notification .title,
+.notification .title, .notification main h3, main .notification h3,
 .notification .subtitle,
 .notification .content {
   color: currentColor;
@@ -5321,7 +5321,7 @@ button.tag:active,
   --bulma-tag-background-l-delta: var(--bulma-tag-active-background-l-delta);
 }
 
-.title,
+.title, main h3,
 .subtitle {
   --bulma-title-color: var(--bulma-text-strong);
   --bulma-title-family: false;
@@ -5341,61 +5341,62 @@ button.tag:active,
   --bulma-subtitle-strong-weight: var(--bulma-weight-semibold);
 }
 
-.title,
+.title, main h3,
 .subtitle {
   word-break: break-word;
 }
-.title em,
+.title em, main h3 em,
 .title span,
+main h3 span,
 .subtitle em,
 .subtitle span {
   font-weight: inherit;
 }
-.title sub,
+.title sub, main h3 sub,
 .subtitle sub {
   font-size: var(--bulma-title-sub-size);
 }
-.title sup,
+.title sup, main h3 sup,
 .subtitle sup {
   font-size: var(--bulma-title-sup-size);
 }
-.title .tag,
+.title .tag, main h3 .tag,
 .subtitle .tag {
   vertical-align: middle;
 }
 
-.title {
+.title, main h3 {
   color: var(--bulma-title-color);
   font-size: var(--bulma-title-size);
   font-weight: var(--bulma-title-weight);
   line-height: var(--bulma-title-line-height);
 }
-.title strong {
+.title strong, main h3 strong {
   color: var(--bulma-title-strong-color);
   font-weight: var(--bulma-title-strong-weight);
 }
-.title:not(.is-spaced):has(+ .subtitle) {
+.title:not(.is-spaced):has(+ .subtitle), main h3:not(.is-spaced):has(+ .subtitle) {
   margin-bottom: 0;
 }
-.title.is-1 {
+.title.is-1, main h3.is-1 {
   font-size: 3rem;
 }
-.title.is-2 {
+.title.is-2, main h3.is-2 {
   font-size: 2.5rem;
 }
-.title.is-3 {
+.title.is-3, main h3 {
   font-size: 2rem;
 }
-.title.is-4 {
+.title.is-4, main h3.is-4 {
   font-size: 1.5rem;
 }
-.title.is-5 {
+.title.is-5, main h3.is-5 {
   font-size: 1.25rem;
 }
-.title.is-6 {
+.title.is-6, main h3.is-6 {
   font-size: 1rem;
 }
-.title.is-7 {
+.title.is-7, main h3.is-7 {
   font-size: 0.75rem;
 }
 
@@ -5409,7 +5410,7 @@ button.tag:active,
   color: var(--bulma-subtitle-strong-color);
   font-weight: var(--bulma-subtitle-strong-weight);
 }
-.subtitle:not(.is-spaced):has(+ .title) {
+.subtitle:not(.is-spaced):has(+ .title, + main h3) {
   margin-bottom: 0;
 }
 .subtitle.is-1 {
@@ -5418,7 +5419,7 @@ button.tag:active,
 .subtitle.is-2 {
   font-size: 2.5rem;
 }
-.subtitle.is-3 {
+.subtitle.is-3, main h3.subtitle {
   font-size: 2rem;
 }
 .subtitle.is-4 {
@@ -8574,7 +8575,7 @@ label.panel-block:hover {
 .columns.is-mobile > .column.is-offset-2 {
   margin-inline-start: 16.6666666667%;
 }
-.columns.is-mobile > .column.is-3 {
+.columns.is-mobile > .column.is-3, main .columns.is-mobile > h3.column {
   flex: none;
   width: 25%;
 }
@@ -8901,7 +8902,7 @@ label.panel-block:hover {
   .column.is-offset-2, .column.is-offset-2-tablet {
     margin-inline-start: 16.6666666667%;
   }
-  .column.is-3, .column.is-3-tablet {
+  .column.is-3, main h3.column, .column.is-3-tablet {
     flex: none;
     width: 25%;
   }
@@ -9821,7 +9822,7 @@ label.panel-block:hover {
     --bulma-column-gap: 0.5rem;
   }
 }
-.columns.is-3 {
+.columns.is-3, main h3.columns {
   --bulma-column-gap: 0.75rem;
 }
 @media screen and (max-width: 768px) {
@@ -13202,7 +13203,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-white .title {
+.hero.is-white .title, .hero.is-white main h3, main .hero.is-white h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13239,7 +13240,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-black .title {
+.hero.is-black .title, .hero.is-black main h3, main .hero.is-black h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13276,7 +13277,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-light .title {
+.hero.is-light .title, .hero.is-light main h3, main .hero.is-light h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13313,7 +13314,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-dark .title {
+.hero.is-dark .title, .hero.is-dark main h3, main .hero.is-dark h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13350,7 +13351,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-text .title {
+.hero.is-text .title, .hero.is-text main h3, main .hero.is-text h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13387,7 +13388,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-primary .title {
+.hero.is-primary .title, .hero.is-primary main h3, main .hero.is-primary h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13424,7 +13425,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-link .title {
+.hero.is-link .title, .hero.is-link main h3, main .hero.is-link h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13461,7 +13462,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-info .title {
+.hero.is-info .title, .hero.is-info main h3, main .hero.is-info h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13498,7 +13499,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-success .title {
+.hero.is-success .title, .hero.is-success main h3, main .hero.is-success h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13535,7 +13536,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-warning .title {
+.hero.is-warning .title, .hero.is-warning main h3, main .hero.is-warning h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13572,7 +13573,7 @@ label.panel-block:hover {
   --bulma-subtitle-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-subtitle-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
-.hero.is-danger .title {
+.hero.is-danger .title, .hero.is-danger main h3, main .hero.is-danger h3 {
   --bulma-title-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
   --bulma-title-strong-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l));
 }
@@ -13714,7 +13715,7 @@ label.panel-block:hover {
   flex-shrink: 0;
   justify-content: center;
 }
-.level-item .title,
+.level-item .title, .level-item main h3, main .level-item h3,
 .level-item .subtitle {
   margin-bottom: 0;
 }
@@ -21563,4 +21564,8 @@ has-background-danger.is-hoverable:active {
 
 .main-wrapper {
   min-height: 100vh;
+}
+
+main h3 {
+  margin-top: 1.5rem;
 }

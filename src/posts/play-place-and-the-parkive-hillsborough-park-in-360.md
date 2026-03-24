@@ -5,7 +5,7 @@ author: Becky Parry
 tags:
   - 360°
   - VR
-coverImage: /images/IMG_20201016_125908_00_015_2021-09-16_13-33-49_screenshot-scaled.jpg
+coverImage: /assets/images/IMG_20201016_125908_00_015_2021-09-16_13-33-49_screenshot-scaled.jpg
 slug: In my last blog I described the way 360 content can provide students with a distinct opportunity to experience learning spaces (an early childhood setting) and research data (an episode of play.) In this one, I am staying with a focus on play to share an account of a resource we created when faced with the realisation that we would not be able to take our students on a face to face visit to a local park.
 ---
 
@@ -16,7 +16,7 @@ The School of Education has undertaken some internationally renowned studies of 
 We really wanted to enable students to reflect on the way the design of urban parks shape children’s experiences of play. We chose Hillsborough Park in S6 because it was local to most of us and we had our own memories to draw on when thinking about where to film.
 
 <figure>
-<img src="/images/IMG_20201016_130516-3.jpg" alt="Hadrian Cawthorne showing Dr. Sabine Little the 360 camera app" />
+<img src="/assets/images/IMG_20201016_130516-3.jpg" alt="Hadrian Cawthorne showing Dr. Sabine Little the 360 camera app" />
 <figcaption>Hadrian Cawthorne showing Dr Sabine Little the 360 camera app, with Dr Aneesh Barai and Dr Nozomi Uematsu<figcaption>
 </figure>
 

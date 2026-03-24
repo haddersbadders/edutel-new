@@ -45,6 +45,7 @@ eleventyConfig.addExtension("scss", {
     // Pass through Bulma and other assets
     eleventyConfig.addPassthroughCopy("src/assets/images");
 eleventyConfig.addPassthroughCopy("src/assets/js");
+eleventyConfig.addPassthroughCopy("src/assets/images");
 
     // If you want to use Sass for Bulma customization later
     eleventyConfig.addWatchTarget("./src/assets/css");

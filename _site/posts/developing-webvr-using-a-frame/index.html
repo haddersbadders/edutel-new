@@ -38,7 +38,7 @@
 <h2>*So what is Terminal?</h2>
 <p>It's a command-line interface that allows you to do stuff on your computer without using your graphical interface. I like to think of it as &quot;pure&quot; computing (or old-fashioned computing!).</p>
 <p>You can see Windows Terminal below. It looks a bit like MS DOS, but it isn't!</p>
-<p><img src="/images/terminal.png" alt="Screenshot of terminal in Windows"></p>
+<p><img src="/assets/images/terminal.png" alt="Screenshot of terminal in Windows"></p>
 <p>If you look at the commands I've written in Terminal above, I've <strong>changed directory</strong> (cd) to my Desktop, then I've <strong>made a new folder/directory</strong> (mkdir)  called <em>webvr_demo</em>. This saved me from having to use the mouse, right clicking etc. Just think of the effort saved there, my mouse is like soooo heavy 😆</p>
 <pre class="language-shell"><code class="language-shell"><span class="token comment"># To change directory</span>
 <span class="token builtin class-name">cd</span> .<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>  
@@ -54,9 +54,9 @@
 <li>Name your new file <strong>index.html</strong></li>
 <li>In your index.html file, add some standard html - type html, then hit TAB to autofill</li>
 </ol>
-<p><img src="/images/newfile.png" alt="create a new file in Atom"></p>
-<p><img src="/images/newindex.png" alt="name the file index.html"></p>
-<p><img src="/images/addhtml.png" alt="add some html"></p>
+<p><img src="/assets/images/newfile.png" alt="create a new file in Atom"></p>
+<p><img src="/assets/images/newindex.png" alt="name the file index.html"></p>
+<p><img src="/assets/images/addhtml.png" alt="add some html"></p>
 <p>You'll see a blue dot in the html file's tab in Atom - this means it has not been saved. Save it.</p>
 <p>To make sure everything is working so far, just add some content into the html file, between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> so your html looks like this:</p>
 <pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
@@ -70,7 +70,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <p>Open up the HTML file in Google Chrome and you'll have a very dull looking web page!</p>
-<p><img src="/images/boring-site.png" alt="your output web page"></p>
+<p><img src="/assets/images/boring-site.png" alt="your output web page"></p>
 <p>Now, let's get rid of that, it's rubbish! Delete the HTML and paste in the following code:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -112,7 +112,7 @@
 <p>On Ubuntu 20.04 for Windows 10, the default node version seemed to be 10.19, while http-server required verion 12 or above. I managed to install node version 12 by referring to <a href="desource/distributions/blob/master/README.md">this page</a>.</p>
 <p>To install the web server, refer to this page <a href="https://www.npmjs.com/package/http-server">https://www.npmjs.com/package/http-server</a>.</p>
 <p>Starting the webserver and going to http://localhost:8080 will serve up your basic VR app:</p>
-<p><img src="/images/basic-vr-app.png" alt="your basic VR app"></p>
+<p><img src="/assets/images/basic-vr-app.png" alt="your basic VR app"></p>
 <p>http-server will also give you an IP address that you ca use if you want to view your masterpiece on a VR headset or mobile phone!</p>
 <h2>Editing your VR app</h2>
 <p>Now you're up and running, you can go back to your index.html file in Atom and start making some changes.</p>
@@ -122,7 +122,7 @@
 <p>Find a new colour and replace the box's colour. Something like:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-box</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1 0.5 -3<span class="token punctuation">"</span></span> <span class="token attr-name">rotation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 45 0<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#BF6D4E<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <p>Then do the same for the other objects...</p>
-<p><img src="/images/new-shape-colours.png" alt="changed the colours of the shapes"></p>
+<p><img src="/assets/images/new-shape-colours.png" alt="changed the colours of the shapes"></p>
 <p>Now let's look at positions of the objects. The position values contain three numbers for positioning along the x, y and z axis. These values are in metres and with respect to the centre of the object:</p>
 <ul>
 <li>x extends <em>right</em></li>
@@ -141,17 +141,17 @@
 <li>-3 metres away from us</li>
 </ul>
 <p>Have a go at moving the objects around using their positional values. See if you can stack them on top of one another!</p>
-<p><img src="/images/shapes-stacked.png" alt="shapes stacked"></p>
+<p><img src="/assets/images/shapes-stacked.png" alt="shapes stacked"></p>
 <p>That's quite difficult isn't it!</p>
 <h2>Go go gadget arms!</h2>
 <p>In your browser press <strong>ctrl + alt + i</strong>. This brings up the <strong>scene inspector</strong>!</p>
-<p><img src="/images/scene-inspector.png" alt="scene inspector"></p>
+<p><img src="/assets/images/scene-inspector.png" alt="scene inspector"></p>
 <p>Woah! 💥</p>
 <p>Down the left-hand side, you can select objects in your scene (use this rather than clicking the objects to select as you can often select the wrong thing!). With an object selected, you can use the red, green and blue handles to move it in 3D space.</p>
-<p><img src="/images/handles.png" alt="move handles"></p>
+<p><img src="/assets/images/handles.png" alt="move handles"></p>
 <p>You'll also see on the right-hand panel, all the properties of the selected object.</p>
 <p>Try moving an object and use the <strong>save</strong> icon at the top of the left-hand panel:</p>
-<p><img src="/images/no-watcher.png" alt="watcher is not running!"></p>
+<p><img src="/assets/images/no-watcher.png" alt="watcher is not running!"></p>
 <p>Oh no! 😧 Don't worry, we just need to install a-frame watcher to allow the browser to edit HTML files!</p>
 <h2>Installing a-frame watcher</h2>
 <p><a href="https://github.com/supermedium/aframe-watcher">A-frame watcher</a> is installed via npm (you have that installed) and will enable changes made in the inspector to be written to your HTML files. That gives us a pretty good visual editor!</p>

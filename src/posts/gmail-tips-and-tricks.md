@@ -3,7 +3,7 @@ title: Gmail tips and tricks
 date: 2021-02-17T00:00:00.000Z
 tags:
   - Google Apps
-coverImage: /images/post-letter-2828146_1920.jpg
+coverImage: /assets/images/post-letter-2828146_1920.jpg
 slug: We use a lot of technology at work so I've put together some tips, tricks and hacks that might save you some time or just make work a bit simpler. This post focusses on Gmail and explores some of the tricks you can use there. I don't promise to revolutionise your working day, but if you can find at least one of these hacks useful, then that's progress! There are loads of hidden features and tricks inside Gmail. Here are just a few.
 draft: true
 ---
@@ -20,9 +20,9 @@ There are loads of hidden features and tricks inside Gmail. Here are just a few.
 
 Schedule send allows you to... well, schedule the sending of emails!
 
-- ![Schedule send](/images/2021-02-15-14_37_18-Window.png)
+- ![Schedule send](/assets/images/2021-02-15-14_37_18-Window.png)
 
-- ![Schedule send](/images/2021-02-15-14_37_35-Window.png)
+- ![Schedule send](/assets/images/2021-02-15-14_37_35-Window.png)
 
 
 The usefulness of this tool is debatable, but consider the following scenarios:
@@ -41,13 +41,13 @@ The Snooze function simply makes emails go away and come back later. This is a g
 
 You can snooze an email by either opening it, or selecting the message in your inbox (tick it) and using the Snooze button:
 
-![Snooze button](/images/2021-02-15-15_14_39-Window.png)
+![Snooze button](/assets/images/2021-02-15-15_14_39-Window.png)
 
 You can then choose from a few pre-set times or choose exactly when the email comes back.
 
 Snoozed emails aren't gone, they just go into the Snoozed inbox in Gmail:
 
-![Snoozed inbox](/images/2021-02-15-15_18_04-Window.png)
+![Snoozed inbox](/assets/images/2021-02-15-15_18_04-Window.png)
 
 #### Canned Responses (Templates)
 
@@ -55,11 +55,11 @@ If your find yourself replying to lots of people with the same or similar reply,
 
 Simply write your message in a draft email, then use the options menu in the email to go to Templates > Save draft as template > Save as new template.
 
-![create message template](/images/2021-02-15-15_23_51-.png)
+![create message template](/assets/images/2021-02-15-15_23_51-.png)
 
 Then when replying to an email, go to your message options menu and choose Templates > your template
 
-![selecting a template](/images/2021-02-15-15_25_56-Window.png)
+![selecting a template](/assets/images/2021-02-15-15_25_56-Window.png)
 
 #### Email Filters
 
@@ -75,7 +75,7 @@ This video shows you how to make filters in Gmail:
 
 You can also use filters to just quickly search for similar emails so you can do something with them e.g. move them or **delete** them.
 
-![Using a filter to search and delete emails](/images/quickfilter.gif)
+![Using a filter to search and delete emails](/assets/images/quickfilter.gif)
 
 #### Cleanse your inbox!
 
@@ -96,13 +96,13 @@ I like to clean up emails every year or so and delete the oldest ones. You can d
 3. Select all the emails
 4. Hit Delete!
 
-- ![Search options](/images/2021-02-18-10_22_31-Inbox-2-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
+- ![Search options](/assets/images/2021-02-18-10_22_31-Inbox-2-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
 
-- ![Search criteria](/images/2021-02-18-10_23_05-Inbox-2-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
+- ![Search criteria](/assets/images/2021-02-18-10_23_05-Inbox-2-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
 
-- ![select all](/images/2021-02-18-10_25_08-Search-results-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x622.png)
+- ![select all](/assets/images/2021-02-18-10_25_08-Search-results-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x622.png)
 
-- ![Delete](/images/2021-02-18-10_26_00-Search-results-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
+- ![Delete](/assets/images/2021-02-18-10_26_00-Search-results-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
 
 
 **Archive your emails** - Remember that your inbox is just a folder within Gmail. You can move messages out of the inbox so somewhere else to give yourself some relief from the clutter.
@@ -120,15 +120,15 @@ To do this -
 
 In pictures:
 
-- ![select all conversations](/images/2021-02-18-10_36_08-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x445.png)
+- ![select all conversations](/assets/images/2021-02-18-10_36_08-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x445.png)
 
-- ![archive button](/images/2021-02-18-10_37_29-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x432.png)
+- ![archive button](/assets/images/2021-02-18-10_37_29-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x432.png)
 
-- ![confirm bulk action](/images/2021-02-18-10_38_26-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
+- ![confirm bulk action](/assets/images/2021-02-18-10_38_26-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail.png)
 
-- ![empty inbox](/images/2021-02-18-10_40_35-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x414.png)
+- ![empty inbox](/assets/images/2021-02-18-10_40_35-Inbox-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x414.png)
 
-- ![the archive](/images/2021-02-18-10_43_39-All-Mail-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x431.png)
+- ![the archive](/assets/images/2021-02-18-10_43_39-All-Mail-h.p.cawthorne@sheffield.ac_.uk-University-of-Sheffield-Mail-1024x431.png)
 
 
 But try to keep your inbox tidy! If it gets messy, you can just go on a deleting spree or archive everything.
@@ -145,7 +145,7 @@ Well, Google's sorcery continues!
 
 Open up the **Side Panel** (on the right-hand side) in Gmail and you'll see a number of apps listed. If you can't see the side panel, you may need to click the little arrow in the bottom right of Gmail:
 
-![Side Panel](/images/2021-02-17-14_24_11-Window.png)
+![Side Panel](/assets/images/2021-02-17-14_24_11-Window.png)
 
 The apps you see from top to bottom are:
 
@@ -160,13 +160,13 @@ I've covered Tasks above, so I'll explain the **Calendar** and **Keep\*** "mini"
 
 Opening these apps inside Gmail (without any emails open), allows you to use them normally, but squished into a mini panel down the side.
 
-- ![Calendar animation](/images/cal-ani.gif)
+- ![Calendar animation](/assets/images/cal-ani.gif)
 
-- ![Keep animation](/images/Keep-ani.gif)
+- ![Keep animation](/assets/images/Keep-ani.gif)
 
 
 Where's the magic then? The magic comes when you use the Calendar or Keep mini-app **while you are reading an email**. Creating a note or Calendar entry while you have an email open will create the note or calendar entry based on the email:
 
-- ![Calendar in context of an email](/images/cal2-ani.gif)
+- ![Calendar in context of an email](/assets/images/cal2-ani.gif)
 
-- ![Keep in context of an email](/images/keep2-ani.gif)
+- ![Keep in context of an email](/assets/images/keep2-ani.gif)
