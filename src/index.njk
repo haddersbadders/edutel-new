@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Education Technology
+---
+<style>
+    .card-bg {
+        background-image: url("/assets/images/{{ post.data.coverImage }}");
+    }
+</style>
+
+<h1 class="title">{{ title }}</h1>
+<p>Welcome to the rebuilt version of my site. I've moved to <strong>Eleventy 3.0 and Bulma CSS</strong>.</p>
+
+
+
+<h2 class="subtitle">Recent Posts</h2>
+
+<p>Below are the posts I've migrated so far:</p>
+
+<div class="grid">
+
+{% for post in collections.post | reverse %}
+<a href="{{ post.url }}">
+<div class="cell card-bg">
+
+
+<h2 class="is-size-4">{{ post.data.title }}</h2>
+
+
+{# <p>{{ post.date | postDate }}</p> #}
+
+{# <img class="image is-square" src="{{ post.data.coverImage }}" alt="{{ post.data.title }}"> #}
+</div>
+</a>
+{% endfor %}
+
+</div>
