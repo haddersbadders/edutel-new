@@ -8,11 +8,35 @@
 
   </head>
   <body>
-    <nav class="navbar is-primary">
-      <div class="container">
-        <div class="navbar-brand"><a class="navbar-item" href="/">HOME</a></div>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <strong>My Site</strong>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/posts">Blog</a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light">Log in</a>
+        </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
 
     <section class="section">
       <div class="container">
@@ -87,5 +111,6 @@
         <p>Built with Eleventy 3.0 and Bulma</p>
       </div>
     </footer>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
